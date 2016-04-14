@@ -13,8 +13,7 @@
   :main ^:skip-aot meetup-clojure.core
   :target-path "target/%s"
   :migratus {:store :database}
-  :plugins [[migratus-lein "0.2.1"]
-            [lein-environ "1.0.2"]]
+  :plugins [[migratus-lein "0.2.1"]]
   :profiles 
   {:uberjar {:aot :all}
    :dev [:project/dev :profiles/dev]

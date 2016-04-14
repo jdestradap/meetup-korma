@@ -8,7 +8,8 @@
 
 (defn migrate [args]
   (let [config {:store :database
-                :db {:connection-uri (to-jdbc-uri (:database-url env))}}]
+                :migration-dir "migrations"
+                :db {:connection-uri (:database-url env)}}]
     (case (first args)
       "migrate"
       (if (> (count args) 1)
